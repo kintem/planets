@@ -1,0 +1,43 @@
+.form {
+  display: flex;
+  align-items:flex-end;
+  justify-content: space-between;
+  border: 1px solid white;
+  padding: 0 35px 30px;
+  background-color: rgba(17, 21, 75, 0.637);
+  color: white;
+  border-radius: 0 0 10px 10px;
+  border-top: none;
+  font-size: 0.9rem;
+  width: 721px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.inputContainer > label {
+  opacity: 0;
+}
+
+.inputContainer > input {
+  max-width: 100px;
+}
+
+.inputContainer > select {
+  width: 100px;
+}
+
+
+.checkbox {
+  flex-direction: row;
+  align-items: center;
+}
+
+.checkbox > label {
+  opacity: 1;
+  margin-left: -30px;
+  margin-right: 5px;
+}

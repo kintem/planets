@@ -1,0 +1,13 @@
+button {
+  font-size: 20px;
+  border: none;
+  background: none;
+}
+
+.minus {
+  color: hotpink;
+}
+
+.plus {
+  color: #50c07b;
+}

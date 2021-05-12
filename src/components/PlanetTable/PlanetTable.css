@@ -1,0 +1,22 @@
+.planetTable {
+  border: 1px solid white;
+  padding: 20px 20px 0 20px;
+  background-color: rgba(17, 21, 75, 0.637);
+  color: white;
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+}
+
+th, td {
+  padding: 15px;
+}
+
+th {
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #50c07b;
+}
+
+td {
+  font-size: 18px;
+}
