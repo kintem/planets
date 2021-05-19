@@ -1,15 +1,18 @@
+.formContainer {
+  border: 1px solid white;
+  background-color: rgba(17, 21, 75, 0.637);
+  min-width: 723px;
+  border-radius: 0 0 10px 10px;
+  border-top: none;
+}
+
 .form {
   display: flex;
   align-items:flex-end;
   justify-content: space-between;
-  border: 1px solid white;
   padding: 0 35px 30px;
-  background-color: rgba(17, 21, 75, 0.637);
   color: white;
-  border-radius: 0 0 10px 10px;
-  border-top: none;
   font-size: 0.9rem;
-  width: 721px;
 }
 
 .inputContainer {
@@ -40,4 +43,22 @@
   opacity: 1;
   margin-left: -30px;
   margin-right: 5px;
+}
+
+.submitContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(52, 212, 119);
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+}
+
+.submit {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
 }

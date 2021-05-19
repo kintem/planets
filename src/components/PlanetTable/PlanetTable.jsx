@@ -1,28 +1,46 @@
 import React from 'react';
-import Button from '../Button/Button';
 import './PlanetTable.css';
 
 const PlanetTable = ({data}) => {
-  const dataJSX = data.map( obj => (
+  const handleDelete = (id) => {
+    const url = `https://borneo-planets.herokuapp.com/planets/${id}`;
+
+    fetch(url, {method: 'DELETE'})
+    .then((response) => response.json())
+    .then((jsonResponse) => {
+      console.log('success', jsonResponse)
+    })
+    .catch(error => console.log(error))
+  }
+
+  const dataJSX = data.map(obj => (
       <tr>
         <td>{obj.name}</td>
         <td>{obj.hasKnownLife.toString()}</td>
         <td>{obj.type}</td>
         <td>{obj.noOfMoons}</td>
-        <td><Button icon="minus"/></td>
+        <td>
+          <div className="deleteContainer">
+            <button onClick={() => handleDelete(obj.id)}>-</button>
+          </div>
+        </td>
       </tr>
     )
   );
 
   return (
     <table className="planetTable">
-      <tr>
-        <th>Name</th>
-        <th>Known life</th>
-        <th>Type</th>
-        <th>Confirmed Moons</th>
-      </tr>
-      {dataJSX}
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Known life</th>
+          <th>Type</th>
+          <th>Confirmed Moons</th>
+        </tr>
+      </thead>
+      <tbody>
+        {dataJSX}
+      </tbody>
     </table>
   )
 }
