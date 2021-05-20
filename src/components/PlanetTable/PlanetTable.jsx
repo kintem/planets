@@ -1,18 +1,7 @@
 import React from 'react';
 import './PlanetTable.css';
 
-const PlanetTable = ({data}) => {
-  const handleDelete = (id) => {
-    const url = `https://borneo-planets.herokuapp.com/planets/${id}`;
-
-    fetch(url, {method: 'DELETE'})
-    .then((response) => response.json())
-    .then((jsonResponse) => {
-      console.log('success', jsonResponse)
-    })
-    .catch(error => console.log(error))
-  }
-
+const PlanetTable = ({data, handleDelete}) => {
   const dataJSX = data.map(obj => (
       <tr>
         <td>{obj.name}</td>

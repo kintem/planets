@@ -25,7 +25,7 @@ td {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(212, 52, 119);
+  background-color: rgb(218, 68, 130);
   width: 22px;
   height: 22px;
   border-radius: 100%;
@@ -38,4 +38,5 @@ button {
   font-weight: bold;
   font-size: 30px;
   padding-bottom: 4px;
+  cursor: pointer;
 }
